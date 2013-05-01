@@ -1,38 +1,38 @@
-== sample-blog-app
+# sample-blog-app
 
 Rails勉強用のサンプルアプリ
 今のところユーザ認証備えた単なるブログ。
 ブログのCRUDらへんをAPI Drivenで書いてみようかな。
 
-=== 目標
+## 目標
 
 * ログイン
 * BDD
 * 単純なCRUD
 * API DrivenなCRUD
 
-=== 始め方
+## 始め方
 
-==== リポジトリ取得
+### リポジトリ取得
 
 ```bash
 $ git clone git@github.com:miss-matching/sample-blog-app.git
 ```
 
-==== gemのインストール
+### gemのインストール
 
 ```bash
 $ cd sample-blog-app
 $ bundle install --path vendor/bundle
 ```
 
-==== DBのマイグレーション
+### DBのマイグレーション
 
 ```bash
 $ bundle exec rake db:migrate
 ```
 
-==== ユーザの作成
+### ユーザの作成
 
 これはユーザ作成の口ができればいらない作業
 
@@ -42,7 +42,7 @@ $ bundle exec rails console
 > User.create username: 'p-baleine', password: 'a'
 ```
 
-==== 起動
+### 起動
 
 ```bash
 $ bundle exec rails server
@@ -50,9 +50,9 @@ $ bundle exec rails server
 
 http://localhost:3000 で確認
 
-=== Tips
+## Tips
 
-==== pry-rails
+### pry-rails
 
 pry-rails入れちゃってます
 
@@ -94,13 +94,16 @@ def form_for(record, options = {}, &proc)
 ... 
 ```
 
-==== ルーテイングでまよったら
+* [pry](https://github.com/pry/pry)
+* [pry-rails](https://github.com/rweng/pry-rails)
+
+### ルーテイングでまよったら
 
 ```bash
 $ bundle exec rake routes
 ```
 
-=== TODO
+## TODO
 
 後で[issue](https://github.com/miss-matching/sample-blog-app/issues)にあげる
 
