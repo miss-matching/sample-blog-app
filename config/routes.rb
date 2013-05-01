@@ -5,6 +5,7 @@ Blog::Application.routes.draw do
   end
 
   get "home/index"
+  post "home/create"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
