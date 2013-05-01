@@ -2,9 +2,9 @@
 
 Rails勉強用のサンプルアプリ
 
-今のところユーザ認証備えた単なるブログ。
+RailsはRails流に乗っかると効率的、Rails流にのっかるには[Ruby on Rails Guides](http://guides.rubyonrails.org/)を読むのが近道、
 
-ブログのCRUDらへんをAPI Drivenで書いてみようかな。
+今のところ[Getting Started with Rails](http://guides.rubyonrails.org/getting_started.html)を参考に作成した単なるブログに[Action Controller Overview](http://guides.rubyonrails.org/action_controller_overview.html)を参考にユーザ認証をつけた状態。
 
 ## 目標
 
@@ -12,6 +12,7 @@ Rails勉強用のサンプルアプリ
 * BDD
 * 単純なCRUD
 * API DrivenなCRUD
+* Pull Request方式での開発
 
 ## 始め方
 
