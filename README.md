@@ -1,7 +1,9 @@
 # sample-blog-app
 
 Rails勉強用のサンプルアプリ
+
 今のところユーザ認証備えた単なるブログ。
+
 ブログのCRUDらへんをAPI Drivenで書いてみようかな。
 
 ## 目標
