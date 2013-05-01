@@ -1,4 +1,9 @@
+# -*- coding: utf-8 -*-
 class PostsController < ApplicationController
+
+  # http://guides.rubyonrails.org/getting_started.html
+  # ガイドを参考にscaffoldで生成
+
   # GET /posts
   # GET /posts.json
   def index

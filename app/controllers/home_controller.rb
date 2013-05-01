@@ -1,14 +1,12 @@
+# -*- coding: utf-8 -*-
 class HomeController < ApplicationController
-  def index
-  end
+  skip_before_filter :require_login, :only => :index
 
-  def create
-    if user = User.authenticate(params[:username], params[:password])
-      session[:current_user_id] = user.id
-      redirect_to posts_path
-    else
-      flash.now[:error] = "Login fail"
-      render "index"
-    end
+  # http://guides.rubyonrails.org/getting_started.html
+  # ガイドを参考に作成、filterについては以下
+  # http://guides.rubyonrails.org/action_controller_overview.html
+  # ホームというよりログイン画面
+
+  def index
   end
 end

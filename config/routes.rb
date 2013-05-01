@@ -4,8 +4,9 @@ Blog::Application.routes.draw do
     resources :comments
   end
 
+  resources :logins, :only => [:create, :destroy]
+
   get "home/index"
-  post "home/create"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
