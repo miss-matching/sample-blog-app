@@ -106,6 +106,27 @@ def form_for(record, options = {}, &proc)
 $ bundle exec rake routes
 ```
 
+### 本流のリポジトリの変更を自分のリポジトリに適用
+
+```bash
+# 本流のリポジトリをリモートに追加
+$ git remote add miss-matching git@github.com:miss-matching/sample-blog-app.git
+
+# 本流の変更をフェッチ
+git fetch miss-matching
+
+# 本流にあって自分のリポジトリにないコミットを確認
+git log --no-merges ^HEAD miss-matching/master
+commit bb77b08e041175559be9639db6ecb5af05f7ccb7
+Author: Tajima Junpei <p.baleine@gmail.com>
+Date:   Thu May 2 08:51:29 2013 +0900
+
+    add `vendor/bundle` to gitignore
+
+# 本流に変更があったのでこれを自分のリポジトリにマージ
+git merge miss-matching/master
+```
+
 ## TODO
 
 後で[issue](https://github.com/miss-matching/sample-blog-app/issues)にあげる
