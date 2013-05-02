@@ -127,8 +127,6 @@ Date:   Thu May 2 08:51:29 2013 +0900
 
 # 本流に変更があったのでこれを自分のリポジトリにリベース
 $ git rebase miss-matching/master
-# 自分のリモートにプッシュ
-$ git push origin master
 ```
 
 ## Workflow
