@@ -2,6 +2,8 @@ require 'test_helper'
 
 class PostsControllerTest < ActionController::TestCase
   setup do
+    @user = users(:one)
+    session[:current_user_id] = @user.id
     @post = posts(:one)
   end
 
