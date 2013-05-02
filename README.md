@@ -109,9 +109,11 @@ $ bundle exec rake routes
 ### 本流のリポジトリの変更を自分のリポジトリに適用
 
 ```bash
+# 以下は最初だけ
 # 本流のリポジトリをリモートに追加
 $ git remote add miss-matching git@github.com:miss-matching/sample-blog-app.git
 
+# 以降は毎回
 # 本流の変更をフェッチ
 git fetch miss-matching
 
@@ -123,8 +125,8 @@ Date:   Thu May 2 08:51:29 2013 +0900
 
     add `vendor/bundle` to gitignore
 
-# 本流に変更があったのでこれを自分のリポジトリにマージ
-git merge miss-matching/master
+# 本流に変更があったのでこれを自分のリポジトリにリベース
+git rebase miss-matching/master
 ```
 
 ## Workflow
