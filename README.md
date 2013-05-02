@@ -127,6 +127,58 @@ Date:   Thu May 2 08:51:29 2013 +0900
 git merge miss-matching/master
 ```
 
+## Workflow
+
+以下の作業は最初だけ行う
+
+### miss-matching/sample-blog-appを自分のアカウント用にフォークする
+
+* Github上のリポジトリをブラウザで開く(https://github.com/miss-matching/sample-blog-app)
+
+* 右上の「Fork」クリックして自分のアカウントを選択する、Github上にACCOUNT_NAME/sample-blog-appリポジトリができる
+
+* ローカルにACCOUNT_NAME/sample-blog-appリポジトリをクローンする
+
+```bash
+$ git clone git@github.com:p-baleine/sample-blog-app.git
+```
+
+以下の作業は毎回行う、以下はissueベースの例
+
+### Pull Request
+
+* 本流に追従している状態でトピックブランチを切る
+
+```bash
+$ git checkout -b topic-test-pass origin/master
+```
+
+* ソース修正してコミット、プッシュする
+
+```bash
+# ソース修正後
+$ git add .
+# コミット
+# コミットメッセージに`closes #<issue number>`を含めるとgithub上のissueを勝手にクローズしてくれる
+$ git commit -m "functionalテストを通す, closes #2"
+# 自分のリモートのトピックブランチにプッシュ
+$ git push origin topic-test-pass
+```
+
+* Github上の自分のリポジトリを開く(https://github.com/ACCOUNT_NAME/sample-blog-app)
+
+* 左上のプルダウンメニューから`topic-test-pass`ブランチを選択する
+
+* 「Pull Request」ボタンをクリックして本流のmasterブランチにPull Requestを送る
+
+### マージ
+
+* Github上の本流のリポジトリを開く(https://github.com/miss-matching/sample-blog-app)
+
+* [Pull Requests]をクリックして当該Pull Requestを開く
+
+* みんなからのつっこみを待つ、みんなから`merge it!`をもらえたら[Merge pull request]をクリックする
+
 ## TODO
 
 後で[issue](https://github.com/miss-matching/sample-blog-app/issues)にあげる
