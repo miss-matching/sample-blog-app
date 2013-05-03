@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "users/new" do
+describe "user/new" do
   let(:user) do
     mock_model("User").as_new_record
   end
