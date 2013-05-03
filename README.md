@@ -117,14 +117,14 @@ $ bundle exec rake routes
 ```bash
 # 以下は最初だけ
 # 本流のリポジトリをリモートに追加
-$ git remote add miss-matching git@github.com:miss-matching/sample-blog-app.git
+$ git remote add upstream git@github.com:miss-matching/sample-blog-app.git
 
 # 以降は毎回
 # 本流の変更をフェッチ
-$ git fetch miss-matching
+$ git fetch upstream
 
 # 本流にあって自分のリポジトリにないコミットを確認
-$ git log --no-merges ^HEAD miss-matching/master
+$ git log --no-merges ^HEAD upstream/master
 commit bb77b08e041175559be9639db6ecb5af05f7ccb7
 Author: Tajima Junpei <p.baleine@gmail.com>
 Date:   Thu May 2 08:51:29 2013 +0900
@@ -132,7 +132,7 @@ Date:   Thu May 2 08:51:29 2013 +0900
     add `vendor/bundle` to gitignore
 
 # 本流に変更があったのでこれを自分のリポジトリにリベース
-$ git rebase miss-matching/master
+$ git rebase upstream/master
 ```
 
 ## Workflow
