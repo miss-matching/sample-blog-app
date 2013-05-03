@@ -41,20 +41,16 @@ $ bundle install --path vendor/bundle
 $ bundle exec rake db:migrate
 ```
 
-### ユーザの作成
-
-これはユーザ作成の口ができればいらない作業
-
-```bash
-$ bundle exec rails console
-# usename p-baleine、password aでユーザ作成
-> User.create username: 'p-baleine', password: 'a'
-```
-
 ### 起動
 
 ```bash
 $ bundle exec rails server
+```
+
+### テスト
+
+```bash
+$ bundle exec rake spec
 ```
 
 http://localhost:3000 で確認
