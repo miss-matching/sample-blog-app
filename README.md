@@ -1,4 +1,4 @@
-# sample-blog-app
+# sample-blog-app [![Build Status](https://travis-ci.org/miss-matching/sample-blog-app.png?branch=master)](https://travis-ci.org/miss-matching/sample-blog-app)
 
 Rails勉強用のサンプルアプリ
 
