@@ -5,6 +5,12 @@
   </p>
 <% end %>
 
+<% if flash[:notice] %>
+  <p class="notice">
+    <%= flash[:notice] %>
+  </p>
+<% end %>
+
 <%= form_tag(logins_path) do %>
   <div class="field">
     <%= label_tag :username %><br />
@@ -19,4 +25,4 @@
   </div>
 <% end %>
 
-<%= link_to 'Sign up', new_post_path %>
+<%= link_to 'Sign up', new_user_path %>
