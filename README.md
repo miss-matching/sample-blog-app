@@ -24,6 +24,12 @@ $ git clone git@github.com:miss-matching/sample-blog-app.git
 
 ### gemのインストール
 
+Webratが要求するパッケージのインストール(http://nokogiri.org/tutorials/installing_nokogiri.html)
+
+```bash
+$ sudo apt-get install libxslt-dev libxml2-dev
+```
+
 ```bash
 $ cd sample-blog-app
 $ bundle install --path vendor/bundle
