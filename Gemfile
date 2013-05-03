@@ -41,4 +41,5 @@ gem 'pry-rails', :group => :development
 
 group :test, :development do
   gem "rspec-rails", "~> 2.0"
+  gem "webrat"
 end
